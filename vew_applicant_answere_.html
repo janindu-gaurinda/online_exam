@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Bootstrap CSS (Local & CDN) -->
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-qEXtGzGTG2G1SOyM8yozLswFJHjqIo+Cn/jrCBzCAbebUqYlHbNf9v8vnt4D2e51" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons (CDN only) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- DataTables CSS (CDN) -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.bootstrap5.css">
+
+    <!-- DataTables JS (CDN) -->
+    <script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
+
+    <!-- Custom Stylesheets (Local) -->
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/index.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/paper.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./img/logo1.jpeg">
+    <style>
+        @font-face {
+            font-family: 'Acumin Variable Concept';
+            src: url('./assets/font/AcuminVariableConcept-WideExtraLight.ttf');
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Acumin Variable Concept', sans-serif;
+        }
+
+        .page {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="header">
+            <!-- nav---------------------------------- -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <a class="nav-link" aria-current="page" href="index.html"> <img src="./img/Q_Online_Logo.png"
+                                alt="Logo" width="70" height="70" class="d-inline-block align-text-top"> </a>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ps-2">
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item nav-item-center px-2">
+                                <div class="vl"></div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item nav-item-center px-2">
+                                <div class="vl"></div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="apply.html">Apply</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item nav-item-center">
+                                <div class="px-2">
+                                    <a class="nav-link logout-link p-0 m-0 d-block text-end" href="admin_login.html"
+                                        onclick="return logout();">Logout</a>
+
+                                </div>
+                            </li>
+                            <li class="nav-item nav-item-center ps-2">
+                                <div class="vl"></div>
+                            </li>
+                            <li class="nav-item nav-item-center ps-2 text-white display-5">
+                                <i class="bi bi-person"></i></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- nav--------------------- -->
+        </div>
+
+        <main class="content">
+            <!-- Main content goes here -->
+            <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+                <div class="bg_color">
+                    <div class="mt-3 ms-5 text-uppercase fw-bold">
+                        <ol class="breadcrumb p-2 rounded">
+                            <li class="breadcrumb-item "><a href="admin_dashbord.html"
+                                    class="text-light link-offset-2 link-underline link-underline-opacity-0">Admin
+                                    Dashboard</a></li>
+                            <li class="breadcrumb-item active text-light" aria-current="page"><i
+                                    class="bi bi-caret-right-fill"></i></li>
+                            <li class="breadcrumb-item "><a href="select_applicant.html"
+                                    class="text-light link-offset-2 link-underline link-underline-opacity-0">Select
+                                    Applicant</a></li>
+                            <li class="breadcrumb-item active text-light" aria-current="page"><i
+                                    class="bi bi-caret-right-fill"></i></li>
+                            <li class="breadcrumb-item active bg-light rounded-pill" aria-current="page"><span
+                                    class="tx_color">View Applicant Answer</span></li>
+                        </ol>
+                    </div>
+                </div>
+            </nav>
+            <div class="container py-3">
+
+                <table class="table table-bordered border-primary">
+    <thead>
+        <tr>
+            <th>Applicant Id</th>
+            <th>Full Name</th>
+            <th>Job Title</th>
+            <th>Count</th>
+            <th>Status</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>101</td>
+            <td>John Doe</td>
+            <td>Software Engineer</td>
+            <td>3</td>
+            <td>Active</td>
+            <td>john.doe@example.com</td>
+            <td>pass1234</td>
+        </tr>
+     
+    </tbody>
+</table>
+
+                <hr>
+                <table class="table table-bordered border-primary">
+    <thead>
+        <tr>
+            <th>Question</th>
+            <th>Applicant Answer</th>
+            <th>Correct Answer</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>What is the capital of France?</td>
+            <td style="color: green;">Paris</td>
+            <td>Paris</td>
+        </tr>
+        <tr>
+            <td>What is 2 + 2?</td>
+            <td style="color: green;">4</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>What is the chemical symbol for water?</td>
+            <td style="color: green;">H₂O</td>
+            <td>H₂O</td>
+        </tr>
+        <tr>
+            <td>Who wrote "Romeo and Juliet"?</td>
+            <td style="color: red;">Charles Dickens</td>
+            <td>William Shakespeare</td>
+        </tr>
+        <tr>
+            <td>What planet is known as the Red Planet?</td>
+            <td style="color: green;">Mars</td>
+            <td>Mars</td>
+        </tr>
+        <tr>
+            <td>Which language is primarily spoken in Brazil?</td>
+            <td style="color: green;">Portuguese</td>
+            <td>Portuguese</td>
+        </tr>
+        <tr>
+            <td>How many continents are there?</td>
+            <td style="color: red;">6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>What is the boiling point of water in Celsius?</td>
+            <td style="color: green;">100</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Who painted the Mona Lisa?</td>
+            <td style="color: green;">Leonardo da Vinci</td>
+            <td>Leonardo da Vinci</td>
+        </tr>
+        <tr>
+            <td>Which ocean is the largest?</td>
+            <td style="color: red;">Atlantic</td>
+            <td>Pacific</td>
+        </tr>
+    </tbody>
+</table>
+
+               
+            </div>
+            <div class="d-flex justify-content-center p-5">
+                <button class="btn btn-primary" onclick="history.back()">Go Back</button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <!-- footer------------------------- -->
+            <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+                <!-- Copyright -->
+                <div class="text-center footer p-1 text-light">
+                    © 2024 Copyright @
+                    <a class="link-light link-offset-2 link-underline link-underline-opacity-0"
+                        href="admin_login.html">AASL IT <span class="fw-bold">! CLICK HERE TO LOGIN ADMIN DASHBOARD
+                            !!!</span></a>
+                </div>
+                <!-- Copyright -->
+            </footer>
+            <!-- footer------------------------- -->
+        </footer>
+    </div>
+    <!-- script---------------------------------- -->
+    <script defer src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="bootstrap-5.3.3-dist/add_qa.js"></script>
+    <script defer src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-lZN37fGJ9FzH9eb1zjF7OM0g1rFv7o2vQNm2gG0pmF1TqEFkVk8kP3c7H67LbcfX"
+        crossorigin="anonymous"></script>
+    <script>
+        function logout() {
+            return confirm("Are you sure you want to log out?");
+        }
+    </script>
+    <!-- script---------------------------------- -->
+</body>
+
+</html>

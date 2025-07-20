@@ -1,0 +1,77 @@
+/* body {
+  background-image: url("../img/Login_Back.jpg");
+  background-size: cover; 
+  background-position: center; 
+} */
+
+.text_1 {
+  font-size: 80px;
+}
+
+@font-face {
+  font-family: "Acumin Variable Concept";
+  src: url("../font/Acumin-RPro.otf");
+}
+
+.footer {
+  background: linear-gradient(to right, #004f7f, #072d4f) !important;
+  font-family: "Acumin Variable Concept", sans-serif;
+  font-weight: lighter;
+  font-size: smaller;
+}
+
+/* ====================================== */
+@font-face {
+  font-family: "Acumin Variable Concept";
+  src: url("../assets/font/AcuminVariableConcept-WideExtraLight.ttf");
+}
+
+.navbar {
+  background: linear-gradient(to right, #004f7f, #072d4f);
+  font-family: "Acumin Variable Concept", sans-serif;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: larger;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+}
+
+.vl {
+  border-left: 1px solid white;
+  height: 50px;
+  align-self: center;
+}
+
+.ms-auto {
+  margin-left: auto !important;
+}
+
+.sizeicon {
+  font-size: 50px;
+  align-self: center;
+}
+
+.Administrator {
+  font-family: "Acumin Variable Concept", sans-serif !important;
+  text-transform: capitalize !important;
+  font-weight: initial !important;
+  font-size: medium !important;
+  padding: 0;
+  margin: 0;
+  align-self: center;
+}
+
+.nav-item-center {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}

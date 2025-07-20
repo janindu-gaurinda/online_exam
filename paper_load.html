@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Id: P1</title>
+    <!-- Bootstrap CSS (Local & CDN) -->
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-qEXtGzGTG2G1SOyM8yozLswFJHjqIo+Cn/jrCBzCAbebUqYlHbNf9v8vnt4D2e51" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons (CDN only) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- DataTables CSS (CDN) -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.bootstrap5.css">
+
+    <!-- DataTables JS (CDN) -->
+    <script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
+
+    <!-- Custom Stylesheets (Local) -->
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/index.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/paper.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./img/logo1.jpeg">
+    <style>
+        @font-face {
+            font-family: 'Acumin Variable Concept';
+            src: url('./assets/font/AcuminVariableConcept-WideExtraLight.ttf');
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Acumin Variable Concept', sans-serif;
+        }
+
+        .question {
+            display: none;
+        }
+
+        .radiospecifyColor {
+            border: 1px solid red;
+        }
+
+        .question {
+            display: none;
+        }
+    </style>
+    <style>
+        .selected {
+            background-color: #d1e7dd;
+            border-radius: 5px;
+            padding: 3px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container col-12 mt-5">
+        <div class="d-flex justify-content-center m-1">
+            <table class="table table-bordered border-primary">
+                <tbody>
+
+
+                    <tr class="text-center">
+                        <td colspan="4">
+                            <h4>Airport and Aviation Services (Sri Lanka) (Private) Limited</h4>
+                        </td>
+                    </tr>
+
+                    <tr class="text-center">
+                        <td>
+                            <h5>Position: Technician</h5>
+                        </td>
+                        <td>
+                            <h5>Start Date: 2025-07-20</h5>
+                        </td>
+                        <td>
+                            <h5>Start Time: 09:00 AM</h5>
+                        </td>
+                        <td>
+                            <div>Time Left: <span id="countdown">01:00:00</span></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-6">
+                <form id="yourFormID" name="yourFormID">
+                    <div id="question-container">
+                        <form id="yourFormID" name="yourFormID">
+                            <!-- Question 1 -->
+                            <div class='question' id='question1'>
+                                <p class='fw-bold'>1. Sample Question 1?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[1]' type='radio'
+                                    value='q1_a1' id='q1_a1' />
+                                <label for='q1_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[1]' type='radio'
+                                    value='q1_a2' id='q1_a2' />
+                                <label for='q1_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[1]' type='radio'
+                                    value='q1_a3' id='q1_a3' />
+                                <label for='q1_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[1]' type='radio'
+                                    value='q1_a4' id='q1_a4' />
+                                <label for='q1_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 2 -->
+                            <div class='question' id='question2'>
+                                <p class='fw-bold'>2. Sample Question 2?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[2]' type='radio'
+                                    value='q2_a1' id='q2_a1' />
+                                <label for='q2_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[2]' type='radio'
+                                    value='q2_a2' id='q2_a2' />
+                                <label for='q2_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[2]' type='radio'
+                                    value='q2_a3' id='q2_a3' />
+                                <label for='q2_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[2]' type='radio'
+                                    value='q2_a4' id='q2_a4' />
+                                <label for='q2_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 3 -->
+                            <div class='question' id='question3'>
+                                <p class='fw-bold'>3. Sample Question 3?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[3]' type='radio'
+                                    value='q3_a1' id='q3_a1' />
+                                <label for='q3_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[3]' type='radio'
+                                    value='q3_a2' id='q3_a2' />
+                                <label for='q3_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[3]' type='radio'
+                                    value='q3_a3' id='q3_a3' />
+                                <label for='q3_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[3]' type='radio'
+                                    value='q3_a4' id='q3_a4' />
+                                <label for='q3_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 4 -->
+                            <div class='question' id='question4'>
+                                <p class='fw-bold'>4. Sample Question 4?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[4]' type='radio'
+                                    value='q4_a1' id='q4_a1' />
+                                <label for='q4_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[4]' type='radio'
+                                    value='q4_a2' id='q4_a2' />
+                                <label for='q4_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[4]' type='radio'
+                                    value='q4_a3' id='q4_a3' />
+                                <label for='q4_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[4]' type='radio'
+                                    value='q4_a4' id='q4_a4' />
+                                <label for='q4_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 5 -->
+                            <div class='question' id='question5'>
+                                <p class='fw-bold'>5. Sample Question 5?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[5]' type='radio'
+                                    value='q5_a1' id='q5_a1' />
+                                <label for='q5_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[5]' type='radio'
+                                    value='q5_a2' id='q5_a2' />
+                                <label for='q5_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[5]' type='radio'
+                                    value='q5_a3' id='q5_a3' />
+                                <label for='q5_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[5]' type='radio'
+                                    value='q5_a4' id='q5_a4' />
+                                <label for='q5_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 6 -->
+                            <div class='question' id='question6'>
+                                <p class='fw-bold'>6. Sample Question 6?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[6]' type='radio'
+                                    value='q6_a1' id='q6_a1' />
+                                <label for='q6_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[6]' type='radio'
+                                    value='q6_a2' id='q6_a2' />
+                                <label for='q6_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[6]' type='radio'
+                                    value='q6_a3' id='q6_a3' />
+                                <label for='q6_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[6]' type='radio'
+                                    value='q6_a4' id='q6_a4' />
+                                <label for='q6_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 7 -->
+                            <div class='question' id='question7'>
+                                <p class='fw-bold'>7. Sample Question 7?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[7]' type='radio'
+                                    value='q7_a1' id='q7_a1' />
+                                <label for='q7_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[7]' type='radio'
+                                    value='q7_a2' id='q7_a2' />
+                                <label for='q7_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[7]' type='radio'
+                                    value='q7_a3' id='q7_a3' />
+                                <label for='q7_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[7]' type='radio'
+                                    value='q7_a4' id='q7_a4' />
+                                <label for='q7_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 8 -->
+                            <div class='question' id='question8'>
+                                <p class='fw-bold'>8. Sample Question 8?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[8]' type='radio'
+                                    value='q8_a1' id='q8_a1' />
+                                <label for='q8_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[8]' type='radio'
+                                    value='q8_a2' id='q8_a2' />
+                                <label for='q8_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[8]' type='radio'
+                                    value='q8_a3' id='q8_a3' />
+                                <label for='q8_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[8]' type='radio'
+                                    value='q8_a4' id='q8_a4' />
+                                <label for='q8_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 9 -->
+                            <div class='question' id='question9'>
+                                <p class='fw-bold'>9. Sample Question 9?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[9]' type='radio'
+                                    value='q9_a1' id='q9_a1' />
+                                <label for='q9_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[9]' type='radio'
+                                    value='q9_a2' id='q9_a2' />
+                                <label for='q9_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[9]' type='radio'
+                                    value='q9_a3' id='q9_a3' />
+                                <label for='q9_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[9]' type='radio'
+                                    value='q9_a4' id='q9_a4' />
+                                <label for='q9_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 10 -->
+                            <div class='question' id='question10'>
+                                <p class='fw-bold'>10. Sample Question 10?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[10]' type='radio'
+                                    value='q10_a1' id='q10_a1' />
+                                <label for='q10_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[10]' type='radio'
+                                    value='q10_a2' id='q10_a2' />
+                                <label for='q10_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[10]' type='radio'
+                                    value='q10_a3' id='q10_a3' />
+                                <label for='q10_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[10]' type='radio'
+                                    value='q10_a4' id='q10_a4' />
+                                <label for='q10_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 11 -->
+                            <div class='question' id='question11'>
+                                <p class='fw-bold'>11. Sample Question 11?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[11]' type='radio'
+                                    value='q11_a1' id='q11_a1' />
+                                <label for='q11_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[11]' type='radio'
+                                    value='q11_a2' id='q11_a2' />
+                                <label for='q11_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[11]' type='radio'
+                                    value='q11_a3' id='q11_a3' />
+                                <label for='q11_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[11]' type='radio'
+                                    value='q11_a4' id='q11_a4' />
+                                <label for='q11_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 12 -->
+                            <div class='question' id='question12'>
+                                <p class='fw-bold'>12. Sample Question 12?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[12]' type='radio'
+                                    value='q12_a1' id='q12_a1' />
+                                <label for='q12_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[12]' type='radio'
+                                    value='q12_a2' id='q12_a2' />
+                                <label for='q12_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[12]' type='radio'
+                                    value='q12_a3' id='q12_a3' />
+                                <label for='q12_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[12]' type='radio'
+                                    value='q12_a4' id='q12_a4' />
+                                <label for='q12_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 13 -->
+                            <div class='question' id='question13'>
+                                <p class='fw-bold'>13. Sample Question 13?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[13]' type='radio'
+                                    value='q13_a1' id='q13_a1' />
+                                <label for='q13_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[13]' type='radio'
+                                    value='q13_a2' id='q13_a2' />
+                                <label for='q13_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[13]' type='radio'
+                                    value='q13_a3' id='q13_a3' />
+                                <label for='q13_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[13]' type='radio'
+                                    value='q13_a4' id='q13_a4' />
+                                <label for='q13_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 14 -->
+                            <div class='question' id='question14'>
+                                <p class='fw-bold'>14. Sample Question 14?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[14]' type='radio'
+                                    value='q14_a1' id='q14_a1' />
+                                <label for='q14_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[14]' type='radio'
+                                    value='q14_a2' id='q14_a2' />
+                                <label for='q14_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[14]' type='radio'
+                                    value='q14_a3' id='q14_a3' />
+                                <label for='q14_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[14]' type='radio'
+                                    value='q14_a4' id='q14_a4' />
+                                <label for='q14_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 15 -->
+                            <div class='question' id='question15'>
+                                <p class='fw-bold'>15. Sample Question 15?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[15]' type='radio'
+                                    value='q15_a1' id='q15_a1' />
+                                <label for='q15_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[15]' type='radio'
+                                    value='q15_a2' id='q15_a2' />
+                                <label for='q15_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[15]' type='radio'
+                                    value='q15_a3' id='q15_a3' />
+                                <label for='q15_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[15]' type='radio'
+                                    value='q15_a4' id='q15_a4' />
+                                <label for='q15_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 16 -->
+                            <div class='question' id='question16'>
+                                <p class='fw-bold'>16. Sample Question 16?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[16]' type='radio'
+                                    value='q16_a1' id='q16_a1' />
+                                <label for='q16_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[16]' type='radio'
+                                    value='q16_a2' id='q16_a2' />
+                                <label for='q16_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[16]' type='radio'
+                                    value='q16_a3' id='q16_a3' />
+                                <label for='q16_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[16]' type='radio'
+                                    value='q16_a4' id='q16_a4' />
+                                <label for='q16_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 17 -->
+                            <div class='question' id='question17'>
+                                <p class='fw-bold'>17. Sample Question 17?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[17]' type='radio'
+                                    value='q17_a1' id='q17_a1' />
+                                <label for='q17_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[17]' type='radio'
+                                    value='q17_a2' id='q17_a2' />
+                                <label for='q17_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[17]' type='radio'
+                                    value='q17_a3' id='q17_a3' />
+                                <label for='q17_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[17]' type='radio'
+                                    value='q17_a4' id='q17_a4' />
+                                <label for='q17_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 18 -->
+                            <div class='question' id='question18'>
+                                <p class='fw-bold'>18. Sample Question 18?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[18]' type='radio'
+                                    value='q18_a1' id='q18_a1' />
+                                <label for='q18_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[18]' type='radio'
+                                    value='q18_a2' id='q18_a2' />
+                                <label for='q18_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[18]' type='radio'
+                                    value='q18_a3' id='q18_a3' />
+                                <label for='q18_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[18]' type='radio'
+                                    value='q18_a4' id='q18_a4' />
+                                <label for='q18_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 19 -->
+                            <div class='question' id='question19'>
+                                <p class='fw-bold'>19. Sample Question 19?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[19]' type='radio'
+                                    value='q19_a1' id='q19_a1' />
+                                <label for='q19_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[19]' type='radio'
+                                    value='q19_a2' id='q19_a2' />
+                                <label for='q19_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[19]' type='radio'
+                                    value='q19_a3' id='q19_a3' />
+                                <label for='q19_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[19]' type='radio'
+                                    value='q19_a4' id='q19_a4' />
+                                <label for='q19_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Question 20 -->
+                            <div class='question' id='question20'>
+                                <p class='fw-bold'>20. Sample Question 20?</p>
+                                <input class='form-check-input border border-black' name='answer_ids[20]' type='radio'
+                                    value='q20_a1' id='q20_a1' />
+                                <label for='q20_a1'>Sample Answer 1</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[20]' type='radio'
+                                    value='q20_a2' id='q20_a2' />
+                                <label for='q20_a2'>Sample Answer 2</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[20]' type='radio'
+                                    value='q20_a3' id='q20_a3' />
+                                <label for='q20_a3'>Sample Answer 3</label><br><br>
+                                <input class='form-check-input border border-black' name='answer_ids[20]' type='radio'
+                                    value='q20_a4' id='q20_a4' />
+                                <label for='q20_a4'>Sample Answer 4</label><br><br>
+                            </div>
+
+                            <!-- Navigation buttons -->
+                            <div class="d-flex justify-content-center m-1">
+                                <input type="hidden" name="paper_id" value="static-paper-id">
+                                <input type="hidden" name="applicant_id" value="static-applicant-id">
+                                <input type="hidden" name="start_time" value="static-start-time">
+                                <input type="hidden" name="duration" value="static-duration">
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <input type="hidden" name="paper_id" value="static-paper-id" />
+                    <input type="hidden" name="applicant_id" value="static-applicant-id" />
+                    <input type="hidden" name="start_time" value="static-start-time" />
+                    <input type="hidden" name="duration" value="static-duration" />
+
+                    <div class="d-flex justify-content-center ">
+                        <a href="app_viwe.html" id="submitButton" class="btn btn-primary" style="display: none;">Finish</a>
+                    </div>
+                </form>
+
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <button type="button" id="prevButton" class="btn btn-success m-1"
+                            style="display: none;">PREV</button>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <button type="button" id="nextButton" class="btn btn-success m-1">NEXT</button>
+                    </div>
+                     <div class="d-flex justify-content-center ">
+                      <a href="app_viwe.html" id="submitButton" class="btn btn-primary" style="display: none;">Finish</a>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-wrap justify-content-center my-3" id="fixedQuestionBtns">
+                <div class="1">
+
+                </div>
+            </div>
+
+            <script>
+                window.onload = function () {
+                    const allQuestions = Array.from(document.querySelectorAll(".question"));
+                    const container = document.getElementById("question-container");
+
+                    let currentIndex = 0;
+
+                    // Move questions into the container
+                    allQuestions.forEach((q) => {
+                        q.style.display = "none";
+                        container.appendChild(q);
+                    });
+
+                    function showQuestion(index) {
+                        allQuestions.forEach((q, i) => {
+                            q.style.display = i === index ? "block" : "none";
+                        });
+
+                        document.getElementById("prevButton").style.display = index > 0 ? "inline-block" : "none";
+                        document.getElementById("nextButton").style.display = index < allQuestions.length - 1 ? "inline-block" : "none";
+                        document.getElementById("submitButton").style.display = index === allQuestions.length - 1 ? "inline-block" : "none";
+                    }
+
+                    document.getElementById("prevButton").addEventListener("click", function () {
+                        if (currentIndex > 0) {
+                            currentIndex--;
+                            showQuestion(currentIndex);
+                        }
+                    });
+
+                    document.getElementById("nextButton").addEventListener("click", function () {
+                        if (currentIndex < allQuestions.length - 1) {
+                            currentIndex++;
+                            showQuestion(currentIndex);
+                        }
+                    });
+
+                    // Optional: Highlight selected answer when navigating back
+                    const radios = document.querySelectorAll("input[type='radio']");
+                    radios.forEach((radio) => {
+                        radio.addEventListener("change", () => {
+                            const name = radio.name;
+                            const group = document.querySelectorAll(`input[name="${name}"]`);
+                            group.forEach((r) => r.parentElement.classList.remove("selected"));
+                            radio.parentElement.classList.add("selected");
+                        });
+                    });
+
+                    showQuestion(currentIndex);
+                };
+                window.onload = function () {
+                    const allQuestions = Array.from(document.querySelectorAll(".question"));
+                    const container = document.getElementById("question-container");
+                    const btnContainer = document.getElementById("fixedQuestionBtns");
+
+                    let currentIndex = 0;
+
+                    // Move questions to container
+                    allQuestions.forEach(q => {
+                        q.style.display = "none";
+                        container.appendChild(q);
+                    });
+
+                    // Generate 20 buttons
+                    allQuestions.forEach((_, index) => {
+                        const btn = document.createElement("button");
+                        btn.textContent = index + 1;
+                        btn.className = "btn btn-primary m-1";
+                        btn.id = `qBtn${index}`;
+                        btn.addEventListener("click", () => {
+                            currentIndex = index;
+                            showQuestion(currentIndex);
+                        });
+                        btnContainer.appendChild(btn);
+                    });
+
+                    // Show one question at a time
+                    function showQuestion(index) {
+                        allQuestions.forEach((q, i) => {
+                            q.style.display = i === index ? "block" : "none";
+                        });
+
+                        document.getElementById("prevButton").style.display = index > 0 ? "inline-block" : "none";
+                        document.getElementById("nextButton").style.display = index < allQuestions.length - 1 ? "inline-block" : "none";
+                        document.getElementById("submitButton").style.display = index === allQuestions.length - 1 ? "inline-block" : "none";
+
+                        updateButtonColors();
+                    }
+
+                    function updateButtonColors() {
+                        allQuestions.forEach((_, i) => {
+                            const btn = document.getElementById(`qBtn${i}`);
+                            const isAnswered = document.querySelector(`input[name='answer_ids[${i + 1}]']:checked`);
+                            btn.className = isAnswered ? "btn btn-success m-1" : "btn btn-outline-success m-1";
+                        });
+                    }
+
+                    // Change color on answer select
+                    document.querySelectorAll("input[type='radio']").forEach(radio => {
+                        radio.addEventListener("change", () => {
+                            updateButtonColors();
+                        });
+                    });
+
+                    // Prev / Next
+                    document.getElementById("prevButton").addEventListener("click", () => {
+                        if (currentIndex > 0) {
+                            currentIndex--;
+                            showQuestion(currentIndex);
+                        }
+                    });
+
+                    document.getElementById("nextButton").addEventListener("click", () => {
+                        if (currentIndex < allQuestions.length - 1) {
+                            currentIndex++;
+                            showQuestion(currentIndex);
+                        }
+                    });
+
+                    showQuestion(currentIndex);
+                };
+
+            </script>
+
+
+            <!-- script---------------------------------- -->
+            <script defer src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+            <script defer src="bootstrap-5.3.3-dist/add_qa.js"></script>
+            <script defer src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+            <script defer src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-lZN37fGJ9FzH9eb1zjF7OM0g1rFv7o2vQNm2gG0pmF1TqEFkVk8kP3c7H67LbcfX"
+                crossorigin="anonymous"></script>
+            <script>
+                function logout() {
+                    return confirm("Are you sure you want to log out?");
+                }
+            </script>
+            <!-- script---------------------------------- -->
+</body>
+
+</html>
